@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,60 +12,100 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="youTube_CodeWithChris_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-qG-ooP">
-                                <rect key="frame" x="-1" y="-1" width="416" height="898"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-1" translatesAutoresizingMaskIntoConstraints="NO" id="wpi-wH-19P" userLabel="Background">
+                                <rect key="frame" x="-46" y="-44" width="572" height="398"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VKV-op-d1v">
-                                <rect key="frame" x="64.5" y="321.5" width="285" height="253"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="x1O-VV-d7F">
+                                <rect key="frame" x="179" y="10" width="122" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="bf2-gz-bZ1"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bf2-gz-bZ1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="bf2-gz-bZ1"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dOD-EQ-Goc" userLabel="Cards and Button Stack View">
+                                <rect key="frame" x="105" y="64.5" width="270" height="231"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a sign In method below:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izt-iv-WuB">
-                                        <rect key="frame" x="0.0" y="0.0" width="285" height="16"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T84-TX-VSi">
-                                        <rect key="frame" x="0.0" y="26" width="285" height="69"/>
-                                        <state key="normal" title="Sign In with Facebook" backgroundImage="FB">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw2-wF-v27">
-                                        <rect key="frame" x="0.0" y="105" width="285" height="69"/>
-                                        <state key="normal" title="Sign In with Google" backgroundImage="Google">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwV-f3-u8u">
-                                        <rect key="frame" x="0.0" y="184" width="285" height="69"/>
-                                        <state key="normal" title="Sign In with Email" backgroundImage="Email">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7ur-j5-vW9" userLabel="Cards Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6" translatesAutoresizingMaskIntoConstraints="NO" id="4cX-21-nue">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card10" translatesAutoresizingMaskIntoConstraints="NO" id="afs-z5-8wi">
+                                                <rect key="frame" x="150" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crb-EV-p6b" userLabel="Deal Button">
+                                        <rect key="frame" x="94" y="200" width="82" height="31"/>
+                                        <state key="normal" image="dealbutton"/>
                                     </button>
                                 </subviews>
+                                <variation key="heightClass=regular-widthClass=compact" spacing="20"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR8-fb-JZi">
-                                <rect key="frame" x="162" y="199.5" width="90.5" height="82"/>
-                                <string key="text">Social 
-Squid</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HTV-z3-HDe" userLabel="Player Score Stack View">
+                                <rect key="frame" x="20" y="231.5" width="47" height="68.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gj-Nk-sX0">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyp-Lf-Q4Y">
+                                        <rect key="frame" x="11" y="20.5" width="25" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n0r-yZ-VDa">
+                                <rect key="frame" x="425.5" y="231.5" width="34.5" height="68.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56W-SV-cAC">
+                                        <rect key="frame" x="0.0" y="0.0" width="34.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjX-bc-oIK">
+                                        <rect key="frame" x="5" y="20.5" width="25" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="UR8-fb-JZi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3of-Ga-UdO"/>
-                            <constraint firstAttribute="bottom" secondItem="TFQ-qG-ooP" secondAttribute="bottom" constant="-1" id="DHb-20-CVI"/>
-                            <constraint firstItem="VKV-op-d1v" firstAttribute="top" secondItem="UR8-fb-JZi" secondAttribute="bottom" constant="40" id="GwA-jH-cYs"/>
-                            <constraint firstAttribute="trailing" secondItem="TFQ-qG-ooP" secondAttribute="trailing" constant="-1" id="Hwv-Ho-4SC"/>
-                            <constraint firstItem="VKV-op-d1v" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OhR-0A-Dek"/>
-                            <constraint firstItem="VKV-op-d1v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bwH-eK-vbE"/>
-                            <constraint firstItem="TFQ-qG-ooP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-1" id="dP1-25-jJy"/>
-                            <constraint firstItem="TFQ-qG-ooP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-1" id="wX1-K5-M9Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wpi-wH-19P" secondAttribute="bottom" constant="-34" id="Ayn-Mu-blv"/>
+                            <constraint firstItem="dOD-EQ-Goc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M3j-yN-RwT"/>
+                            <constraint firstItem="x1O-VV-d7F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Nie-mR-BfS"/>
+                            <constraint firstItem="wpi-wH-19P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="RQ3-2N-zhG"/>
+                            <constraint firstItem="x1O-VV-d7F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TaR-0v-ztb"/>
+                            <constraint firstItem="HTV-z3-HDe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zp1-k6-toh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n0r-yZ-VDa" secondAttribute="trailing" constant="20" id="buy-iO-WKy"/>
+                            <constraint firstItem="dOD-EQ-Goc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="e6G-Se-i5z">
+                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wpi-wH-19P" secondAttribute="trailing" constant="-46" id="jWT-9y-Dfp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n0r-yZ-VDa" secondAttribute="bottom" constant="20" id="juY-Lm-8hi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HTV-z3-HDe" secondAttribute="bottom" constant="20" id="sec-fK-83b"/>
+                            <constraint firstItem="wpi-wH-19P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-46" id="v9B-iv-Z8b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -76,9 +116,10 @@ Squid</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="414" height="896"/>
-        <image name="Email" width="285" height="69"/>
-        <image name="FB" width="285" height="69"/>
-        <image name="Google" width="285" height="69"/>
+        <image name="Background-1" width="414" height="896"/>
+        <image name="card10" width="120" height="170"/>
+        <image name="card6" width="120" height="170"/>
+        <image name="dealbutton" width="82" height="31"/>
+        <image name="logo" width="122" height="67"/>
     </resources>
 </document>
