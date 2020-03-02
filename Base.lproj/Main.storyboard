@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="landscape" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +12,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="youTube_CodeWithChris_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-1" translatesAutoresizingMaskIntoConstraints="NO" id="wpi-wH-19P" userLabel="Background">
-                                <rect key="frame" x="-46" y="-44" width="572" height="398"/>
+                                <rect key="frame" x="-46" y="0.0" width="506" height="896"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="x1O-VV-d7F">
-                                <rect key="frame" x="179" y="10" width="122" height="55"/>
+                                <rect key="frame" x="146" y="54" width="122" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="bf2-gz-bZ1"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dOD-EQ-Goc" userLabel="Cards and Button Stack View">
-                                <rect key="frame" x="105" y="64.5" width="270" height="231"/>
+                                <rect key="frame" x="72" y="377.66666666666669" width="270" height="221.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7ur-j5-vW9" userLabel="Cards Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
@@ -49,23 +49,26 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crb-EV-p6b" userLabel="Deal Button">
-                                        <rect key="frame" x="94" y="200" width="82" height="31"/>
+                                        <rect key="frame" x="94.333333333333343" y="189.99999999999994" width="81.666666666666657" height="31"/>
                                         <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ue1-i3-YhA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=compact" spacing="20"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HTV-z3-HDe" userLabel="Player Score Stack View">
-                                <rect key="frame" x="20" y="231.5" width="47" height="68.5"/>
+                                <rect key="frame" x="20" y="773.66666666666663" width="47" height="68.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gj-Nk-sX0">
-                                        <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyp-Lf-Q4Y">
-                                        <rect key="frame" x="11" y="20.5" width="25" height="48"/>
+                                        <rect key="frame" x="11.33333333333333" y="20.333333333333371" width="24.666666666666671" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -73,16 +76,16 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n0r-yZ-VDa">
-                                <rect key="frame" x="425.5" y="231.5" width="34.5" height="68.5"/>
+                                <rect key="frame" x="359.66666666666669" y="773.66666666666663" width="34.333333333333314" height="68.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56W-SV-cAC">
-                                        <rect key="frame" x="0.0" y="0.0" width="34.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjX-bc-oIK">
-                                        <rect key="frame" x="5" y="20.5" width="25" height="48"/>
+                                        <rect key="frame" x="5.0000000000000018" y="20.333333333333371" width="24.666666666666671" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -109,6 +112,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="leftImageView" destination="4cX-21-nue" id="GIt-CO-MbF"/>
+                        <outlet property="leftScoreLabel" destination="wyp-Lf-Q4Y" id="Fp0-3G-uZY"/>
+                        <outlet property="rightImageView" destination="afs-z5-8wi" id="A5o-ne-hJc"/>
+                        <outlet property="rightScoreLabel" destination="xjX-bc-oIK" id="Yur-GS-bXf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,7 +128,7 @@
         <image name="Background-1" width="414" height="896"/>
         <image name="card10" width="120" height="170"/>
         <image name="card6" width="120" height="170"/>
-        <image name="dealbutton" width="82" height="31"/>
+        <image name="dealbutton" width="81.666664123535156" height="31"/>
         <image name="logo" width="122" height="67"/>
     </resources>
 </document>
